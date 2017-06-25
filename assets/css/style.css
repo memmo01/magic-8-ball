@@ -1,0 +1,34 @@
+.container{
+
+width:300px;
+
+border:solid black;
+
+margin:10% 0 0 42%;
+
+text-align: center;
+
+ 
+
+}
+
+#ask{
+
+margin:100px;
+
+}
+
+.combined{
+
+text-align:center;
+
+font-size:25px;
+
+padding-bottom:20px;
+
+margin-bottom:20px;
+
+}
+#userInput{
+  width:80%;
+}
