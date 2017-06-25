@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>trying out the magic eigthball</title>
+
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+ 
+ 
+
+</head>
+
+<style>
+
+.container{
+
+width:300px;
+
+border:solid black;
+
+margin:10% 0 0 42%;
+
+text-align: center;
+
+ 
+
+}
+
+#ask{
+
+margin:100px;
+
+}
+
+.combined{
+
+text-align:center;
+
+font-size:25px;
+
+padding-bottom:20px;
+
+margin-bottom:20px;
+
+}
+#userInput{
+  width:80%;
+}
+
+ 
+
+</style>
+
+<body>
+
+ 
+
+<div class="container">
+
+<h1>MAGIC 8 BALL!</h1>
+<p> Click the button and ask your question</p>
+
+  <!-- Trigger the modal with a button -->
+
+  <button type="button" class="btn btn-info btn-lg" id="ask"data-toggle="modal" data-target="#myModal">Ask</button>
+
+ 
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+
+    <div class="modal-dialog">
+
+   
+
+      <!-- Modal content-->
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title">ask your question below</h4>
+
+        </div>
+
+        <div class="modal-body">
+
+<input type="text"  id="userInput">
+
+        </div>
+
+        <div class="modal-footer">
+
+<button type="button" class="btn btn-default" id="submit" data-dismiss="modal">Submit</button>
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        </div>
+
+      </div>
+
+     
+
+    </div>
+
+  </div>
+
+<div class="combined">
+    <i> <div id="response"></div></i>
+<br>
+     <div id="answer"></div>
+</div>
+
+ 
+
+</div>
+
+ 
+ 
+
+<script type="text/javascript">
+
+var stuff = ["yes","no","all signs point to YES!","I'm not sure","Try asking again later, I'm too tired to think right now", "absolutely", "that is doubtful","The future is foggy right now, I cannot answer with certainty"];
+ 
+var response = [];
+ 
+
+     $("#submit").on("click", function(){
+
+     var input = $("#userInput").val();
+
+     if(input === "" || input === " "){
+
+           alert("please enter a question");
+
+}
+
+else{     
+
+ 
+
+$("#userInput").val("");
+
+ 
+
+ 
+
+response.push(input);
+
+ 
+
+var word = stuff[Math.floor(Math.random()*stuff.length)];
+
+ 
+
+ 
+
+document.getElementById("response").innerHTML = ( input + ":  ");
+
+document.getElementById("answer").innerHTML = (word);
+ 
+}
+
+})
+
+ 
+
+</script>
+
+ 
+
+ 
+
+</body>
+
+</html>
