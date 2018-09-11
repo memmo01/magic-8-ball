@@ -3,8 +3,7 @@ body {
   height: 100%;
 }
 .containers {
-  border: solid black;
-  height: 100%;
+  /* border: solid black; */
   padding: 40px;
   text-align: center;
 }
@@ -27,8 +26,9 @@ body {
   font-size: 55px;
 
   padding-bottom: 20px;
+  width: 80%;
 
-  margin-bottom: 20px;
+  margin: 0 0 20px 10%;
 }
 #userInput {
   width: 80%;
